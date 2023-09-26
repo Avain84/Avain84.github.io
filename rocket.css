@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+}
+.item{
+    width: 100%;
+}
+img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+a,.btn{
+    text-decoration: none;
+}
+.btn{
+    color: #aaa;
+    border: 1px solid #ccc ;
+    border-radius: 20px;
+    padding: .1em 1em;
+    align-self: flex-end;
+    margin-top: auto;
+    transition: .5s;
+}
+.btn:hover{
+    background-color: #f99;
+    color: #fff;
+}
+/* nav導覽列 */
+.header-nav{
+    background: #aaa;
+    position: fixed;
+    top: 0;right: 0;left: 0;
+    z-index: 10;
+}
+.header-nav .container{
+    max-width: none;
+    padding: 10px 20px;
+}
+.header-nav .logo{
+    width: 40px;
+}
+.header-nav .main-nav{
+    margin: auto ;
+    font-size: 0;
+    display: flex;
+}
+.header-nav .main-nav a{
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 1em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    position: relative;
+    transition: .3s;
+    transform: translateY(-3px);
+}
+.header-nav .main-nav a:hover{
+    transform: translateY(3px);
+    background-color: #faa;
+    box-shadow: 10px 10px 20px #555;
+    border-radius: 20px;
+}
+.header-nav .main-nav a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 40%;bottom: 0;right: 40%;
+    height: 3px;
+    background-color: #fff;
+    transition: .5s;
+}
+.header-nav .main-nav a:hover::after{
+    left: 0;bottom: -3px;right: 0;
+}
+.header-nav .header-search{
+    display: flex;
+    padding-right: 3em;
+}
+.header-nav input,
+.header-nav button{
+    border: none;
+    background-color: #fff;
+    padding: 7px 10px;
+}
+.header-nav input{
+    border-radius: 10px 0 0 10px;
+}
+.header-nav button{
+    border-radius: 0 10px 10px 0;
+}
+.header-nav input:focus,
+.header-nav button:focus{
+    outline: none;
+    background-color: #eee;
+}
+/* banner橫幅 */
+.banner{
+    background: linear-gradient(45deg,#fcc 10%,transparent 70%) center center/100% 100%,url(https://cdn.pixabay.com/photo/2018/03/26/14/07/space-3262811_1280.jpg) no-repeat right bottom/auto 100%;
+}
+.banner .container{
+    box-sizing: border-box;
+    height: 220px;
+    padding: 10px 20px;
+}
+.banner .banner-txt{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    letter-spacing: 2px;
+    color: #666;
+}
+.banner h2{
+    font-size: 22px;
+    animation: banner-h2 2s .3s forwards;
+} 
+.banner h3{
+    animation: banner-h3 4s .3s forwards;
+}
+.banner h4{
+    color: #fcc;
+    animation: banner-h4 3s forwards ease-in;
+}
+@keyframes banner-h2 {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(40%);}
+}
+@keyframes banner-h3 {
+    0%{transform: translateX(0%);}
+    55%{transform: translateX(300%);}
+    100%{transform: translateX(180%);}
+}
+@keyframes banner-h4 {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(750%);color:#f99;box-shadow: 5px 5px 20px #999;}
+}
+/* about me 關於我 */
+/* title h1 */
+.title{
+    margin: 50px 0;
+}
+.title .container{
+    align-items: center;
+    flex-direction: column;
+}
+.title h1{
+    width: 100%;
+    font-size: 40px;
+    display: flex;
+}
+.title h1::before,
+.title h1::after{
+    content: '';
+    display: block;
+    flex-grow: 1;
+    height: 4px;
+    background-color: #aaa;
+    margin: auto .5em;
+    border-radius: 20px;
+}
+.title .txt p{
+    margin: 1em;
+}
+/* introduction */
+.aboutme{
+    margin: 70px 0;
+}
+.aboutme .item{
+    margin: 0 20px;
+    display: flex;
+    background-color: rgba(230, 230, 230, .6);
+    box-shadow: 10px 10px 30px #777;
+}
+.aboutme .pic{
+    width: 40%;
+}
+.aboutme .pic img{
+    object-fit: cover;
+}
+.aboutme .txt{
+    width: 60%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+.aboutme .txt h3{
+    font-weight: 700;
+    font-size: 24px;
+}
+.aboutme .txt p{
+    margin: 5px 0;
+}
+/* about korea */
+.korea{
+    background-color: rgba(210, 210, 210, 0.368);
+    padding: 30px 0;
+}
+/* title h1*/
+/* drama 韓劇 */
+/* title h2 */
+.sec-title h2{
+    width: 100%;
+    font-size: 32px;
+    margin: 30px 0;
+    text-align: center;
+}
+/* drame picture */
+.drama .item{
+    margin: 15px;
+    position: relative;
+}
+.drama img{
+    object-fit: cover;
+    object-position: right bottom;
+}
+.drama .txt{
+    position: absolute;
+    top: 0;right: 0;bottom: 0;left: 0;
+    padding: 10px;
+    background-color: rgba(50, 50, 50, .6);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: .8s;
+}
+.drama .btn{
+    position: absolute;
+    right: 1em;bottom: 1em;
+    opacity: 0;
+}
+.drama .item:hover .txt,
+.drama .item:hover .btn{
+    opacity: 1;
+}
+.drama .txt h3{
+    font-size: 20px;
+    color: #f99;
+    margin: 5px 0;
+    align-self: center;
+    position: relative;
+}
+.drama .txt h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;right: 50%;bottom: -3px;
+    height: 2px;
+    background-color: #f99;
+    transition: .5s .4s;
+}
+.drama .item:hover .txt h3::after{
+    left: 0%;right: 0%;
+}
+.drama .txt p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+/* actor 演員 */
+/* title h2 */
+/* actor picture */
+.actor .item{
+    box-sizing: border-box;
+    margin: 15px;
+    background-color: #fee;
+    border: 2px solid #aaa;
+    transform: translateY(0px);
+    transition: .5s;
+    border-radius: 100px 100px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.actor .item:hover{
+    transform: translateY(-20px);
+    background: linear-gradient(0deg, #ccc ,#555 70%);
+    box-shadow: 10px 10px 20px rgba(255, 170, 170, 0.589);
+}
+.actor .pic{
+    width: 100%;
+    max-height: 350px;
+}
+.actor .pic img{
+    border-radius: 100px ;
+    object-fit: cover;
+    object-position: center top;
+}
+.actor .txt{
+    padding: 10px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ;
+}
+.actor .txt h3{
+    font-size: 24px;
+    border-bottom: 2px solid #999;
+    padding-bottom: .3em;
+    margin-bottom: .3em;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    transition: .5s;
+}
+.actor .item:hover .txt h3{
+    color:#fff;
+    letter-spacing: .4em;
+    border-bottom: 2px solid #faa;
+}
+.actor .txt p{
+    font-size: 16px;
+    padding: .5em .5em;
+    line-height: 1.5;
+    font-weight: 300;
+    transition: .5s;
+}
+.actor .item:hover .txt p{
+    color: #fff;
+}
+.actor .item:hover .txt strong{
+    background-color: #faa;
+    color: #000;
+    font-weight: 500;
+}
+.actor .btn{
+    margin-right: 1em;
+    margin-bottom: 1em;
+    position: relative;
+}
+.actor .item:hover  .btn{
+    border: 1px solid #fff ;
+    color: #fff;
+}
+/* footer 頁尾 */
+.footer{
+    padding: 50px 0 80px;
+    background: linear-gradient(120deg,#f99,#fcc);
+}
+.footer .container{
+    max-width: none;
+}
+.footer .txt{
+    color: #444;
+    margin: 2em 4em;
+    height: 100%;
+}
+.footer .item h4{
+    font-size: 22px;
+    border-bottom: 3px double #444;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+}
+.footer nav{
+    display: flex;
+    flex-direction: column;
+}
+.footer nav a{
+    line-height: 2;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: #444;
+}
+.footer nav a:hover{
+    color: #fff;
+    font-weight: 700;
+}
+.footer .footer-add .txt{
+    display: flex;
+    flex-direction: column;
+}
+.footer .footer-add form{
+    margin: auto 0 ;
+    display: flex;
+    width: 100%;
+}
+.footer .footer-add input[type="text"],
+.footer .footer-add input[type="submit"]{
+    border: none;
+    padding: 5px 10px;
+}
+.footer .footer-add input[type="text"]{
+    width: 0;
+    flex-grow: 1;
+}
+.footer .footer-add input[type="text"]:focus{
+    outline: none;
+}
+.footer .footer-add input[type="submit"]{
+    color: #fff;
+    background-color: #444;
+}
+.footer .footer-add input[type="submit"]:hover{
+    background-color: #aaa;
+}
+@media screen and (max-width:1200px) {
+    .banner h2,
+    .banner h3,
+    .banner h4{
+        animation: none;
+        color: #666;
+    }
+    .item{
+        width: 45%;
+    }
+    .aboutme .item{
+        margin:  20px 10px;
+    }
+    .container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .banner .container{
+        justify-content: flex-start;
+    }
+    .title .txt{
+        text-align: center;
+    }
+    .drama .txt h3{
+        font-size: 24px;
+        margin: .5em 0;
+    }   
+    .drama .txt p{
+        padding:0 2em;
+        font-size: 20px;
+    }
+    .actor .pic{
+        max-height: 430px;
+    }
+}
+@media screen and (max-width:900px) { 
+    .drama .txt p{
+        padding:0 1em;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:780px) { 
+    .banner .container{
+        height: 250px;
+    }
+}
+@media screen and (max-width:700px) {
+    .item{
+        width: 70%;
+    }
+    .drama .txt h3{
+        font-size: 24px;
+        margin: .5em 0;
+    }   
+    .drama .txt p{
+        padding: 1em;
+        font-size: 18px;
+    }
+    .actor .pic{
+        max-height: 500px;
+    }
+}
